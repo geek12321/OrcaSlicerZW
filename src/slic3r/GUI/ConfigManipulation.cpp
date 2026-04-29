@@ -260,7 +260,7 @@ void ConfigManipulation::update_print_fff_config(DynamicPrintConfig* config, con
         is_msg_dlg_already_exist = false;
     }
 
-    if (abs(config->option<ConfigOptionFloat>("xy_hole_compensation")->value) > 2)
+    if (abs(config->option<ConfigOptionFloat>("xy_hole_compensation")->value) > 5)
     {
         const wxString msg_text = _(L("This setting is only used for model size tunning with small value in some cases.\n"
                                       "For example, when model size has small error and hard to be assembled.\n"
@@ -275,7 +275,7 @@ void ConfigManipulation::update_print_fff_config(DynamicPrintConfig* config, con
         is_msg_dlg_already_exist = false;
     }
 
-    if (abs(config->option<ConfigOptionFloat>("xy_contour_compensation")->value) > 2)
+    if (abs(config->option<ConfigOptionFloat>("xy_contour_compensation")->value) > 5)
     {
         const wxString msg_text = _(L("This setting is only used for model size tunning with small value in some cases.\n"
                                       "For example, when model size has small error and hard to be assembled.\n"
